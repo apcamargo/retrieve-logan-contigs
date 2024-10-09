@@ -1,4 +1,4 @@
-# `retrieve_logan_contigs`
+# `retrieve-logan-contigs`
 
 This script downloads contigs from a specified Logan assembly. It includes options to:
 
@@ -9,9 +9,10 @@ This script downloads contigs from a specified Logan assembly. It includes optio
 ## Usage
 
 ```
-usage: retrieve_logan_contigs.py [-h] [--min-sequence-length MIN_SEQUENCE_LENGTH]
-                                 [--circles-only] [--fix-circles] [--output OUTPUT]
-                                 accession
+usage: retrieve-logan-contigs [-h] [--min-sequence-length MIN_SEQUENCE_LENGTH]
+                              [--circles-only] [--fix-circles]
+                              [--output OUTPUT]
+                              accession
 
 Retrieve and process Logan contig data from S3.
 
@@ -23,8 +24,8 @@ options:
   --min-sequence-length MIN_SEQUENCE_LENGTH
                         Minimum sequence length to output (default: 0)
   --circles-only        Output only circular sequences (default: False)
-  --fix-circles         Fix circular sequences by removing duplicates (default:
-                        False)
+  --fix-circles         Fix circular sequences by removing duplicates
+                        (default: False)
   --output OUTPUT       Output file path (if not specified, print to stdout)
                         (default: None)
 ```

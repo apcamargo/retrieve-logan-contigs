@@ -1,0 +1,14 @@
+[project]
+authors = ["Antonio Camargo <antoniop.camargo@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+description = "Downloads contigs from a specified Logan assembly"
+name = "retrieve-logan-contigs"
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.9,<4"
+boto3 = ">=1.35.35,<2"
+zstandard = ">=0.23.0,<0.24"
