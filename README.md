@@ -12,12 +12,12 @@ This script downloads contigs from a specified Logan assembly. It includes optio
 usage: retrieve-logan-contigs [-h] [--min-sequence-length MIN_SEQUENCE_LENGTH]
                               [--circles-only] [--fix-circles]
                               [--output OUTPUT]
-                              accession
+                              accessions [accessions ...]
 
 Retrieve and process Logan contig data from S3.
 
 positional arguments:
-  accession             Sample accession
+  accessions            Sample accession(s)
 
 options:
   -h, --help            show this help message and exit

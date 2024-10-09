@@ -176,7 +176,7 @@ def main():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         allow_abbrev=False,
     )
-    parser.add_argument("accession", help="Sample accession")
+    parser.add_argument("accessions", help="Sample accession(s)", nargs="+")
     parser.add_argument(
         "--min-sequence-length",
         type=int,
@@ -204,13 +204,14 @@ def main():
 
     args = parser.parse_args()
 
-    process_s3_fasta(
-        args.accession,
-        min_sequence_length=args.min_sequence_length,
-        circles_only=args.circles_only,
-        fix_circles=args.fix_circles,
-        output=args.output,
-    )
+    for accession in args.accessions:
+        process_s3_fasta(
+            accession,
+            min_sequence_length=args.min_sequence_length,
+            circles_only=args.circles_only,
+            fix_circles=args.fix_circles,
+            output=args.output,
+        )
 
 
 if __name__ == "__main__":
